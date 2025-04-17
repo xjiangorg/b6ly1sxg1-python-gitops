@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: b6ly1sxg1-python 
+  janus-idp.io/tekton: b6ly1sxg1-python
+  backstage.io/kubernetes-id: b6ly1sxg1-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: b6ly1sxg1-python
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
